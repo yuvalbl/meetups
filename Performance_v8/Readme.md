@@ -40,4 +40,13 @@ Yes. consider the following code:
 ---
 
 # Excercise
-Lorem ipsum.
+* ex01.html
+* ex02.js
+* ex03.js
+
+---
+# Tips:
+* Upgrade v8 (node, chrome) whenever possible
+* Lint it (Lint help avoid most optimization issues)
+* Typescript is good for you (typing allow better optimization heuristics).
+* use (strict mode)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode] (HW: Is Angular-cli / Typescript already doing it for you?)

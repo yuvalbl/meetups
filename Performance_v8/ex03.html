@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>V8 Optimization - exercise 03</title>
+</head>
+<body>
+
+<h1>Try to reach optimal run time - without chaging the program logic</h1>
+<p><button onclick="doWork()">Do work</button> (Will Optimized)</p>
+<script>
+// see what happens when you change it to "use strict"
+"don't use strict"
+function isBigger() {
+    let isBigger = true;
+    let i = 0;
+    while(isBigger && arguments[i + 1]) {
+        isBigger = arguments[i] < arguments[i + 1];
+        i++;
+    }
+}
+
+function doWork() {
+	console.time('doWork');
+	let randomNum;
+	let currentFiboNum = 0;
+	let previousFiboNum = 0;
+	let fiboSum = 0;
+	for(let i = 0; i < 1000; i++) {
+        // get random number between 0 to 10
+	    randomNum = Math.random() * i;
+        currentFiboNum = fibonacci(Math.floor(randomNum));
+        // if randomNum bigger than 5 and  previous < current < 9999
+        if( isBigger(randomNum, 5) && isBigger(previousFiboNum, currentFiboNum, 9999)) {
+            fiboSum += currentFiboNum;
+        }
+        previousFiboNum = currentFiboNum;
+	}
+	console.timeEnd('doWork');
+}
+
+// get the N number in fibonacci series
+function fibonacci(num){
+    var a = 1, b = 0, temp;
+
+    while (num >= 0){
+        temp = a;
+        a = a + b;
+        b = temp;
+        num--;
+    }
+
+    return b;
+}
+
+function doWorkFibo() {
+    console.time('doWorkFibo');
+    for(let i = 0; i < 50000; i++) {
+        fibonacci(i);
+    }
+    console.timeEnd('doWorkFibo');
+}
+
+// this function will optimized into native code
+function doWorkStringType() {
+	console.time('doWorkStaticType');
+	const a = 'abcd';
+	const b = 'abcd'
+	for(let i = 0; i < 10000000; i++) {
+		add((i==50000) ? a : b);
+	}
+	console.timeEnd('doWorkStaticType');
+}
+
+// this function will optimized and later on will de-optimized
+function doWorkDynamicType() {
+    console.time('doWorkDynamicType');
+    const a = 1234;
+    const b = 'abcd'
+    for(let i = 0; i < 10000000; i++) {
+        add((i==50000) ? a : b);
+    }
+    console.timeEnd('doWorkDynamicType');
+}
+
+// this function cannot be optimized (current chrome v61.0.3163.100)
+function doWorkNotOptimizable() {
+	console.time('doWorkNotOptimizable');
+	with(console) {
+		log('some log')
+		const a = 1234;
+		const b = 5678;
+		for(let i = 0; i < 10000000; i++) {
+			add((i==50000) ? a : b);
+		}
+	}
+	console.timeEnd('doWorkNotOptimizable');
+}
+
+
+</script>
+</body>
+</html>
