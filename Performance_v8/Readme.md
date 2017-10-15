@@ -3,10 +3,12 @@
 ---
 
 ## Overview
-
 With proper Optimization a javascript function can run
-x100 times faster and more
+x100 times faster and more.
 
+## Goals
+* Describe how v8 works (In principle...)
+* Review options to improve v8 optimization
 ---
 
 ## What is v8 and how it works?
