@@ -34,8 +34,8 @@ Yes. consider the following code:
 * "Bailout list" is changing from time to time, as optimizer support getting better.
 * Among main bailouts reasons at this time (October 2017):
     * debugger
-    * debugger
-    * debugger
+    * with
+    * index out of array
 
 ---
 
