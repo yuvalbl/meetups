@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h1>Se console logs for run time statistics</h1>
+<h1>Ses console logs for run time statistics</h1>
 <p><button onclick="doWorkNumberType()">Do work Number Type</button> (Will Optimized)</p>
 <p><button onclick="doWorkStringType()">Do work String Type</button> (Will Optimized)</p>
 <p><button onclick="doWorkDynamicType()"> work Dynamic Type</button> (Will Optimized and then De-optimized)</p>
@@ -14,7 +14,16 @@
 // see what happens when you change it to "use strict"
 "don't use strict"
 function add(a) {
-	return a+a;
+// uncomment to investigate
+//    const obj = {
+//        get prop() {
+//            return 1;
+//        },
+//        getProp: function () {
+//            return 1;
+//        }
+//    };
+    return a+a;
 }
 
 // this function will optimized into native code

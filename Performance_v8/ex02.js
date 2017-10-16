@@ -2,6 +2,15 @@
 // see how result change when you comment/uncomment function calls
 
 function add(a) {
+// uncomment to investigate
+//    const obj = {
+//        get prop() {
+//            return 1;
+//        },
+//        getProp: function () {
+//            return 1;
+//        }
+//    };
     return a+a;
 }
 
