@@ -22,7 +22,7 @@ by compling angular in advanced.
     * `ng build -prod -sm -op dist-prod-sm`
 * -op (output-path) define output directory (can use relative path - useful when server is in different project)
 * -sm (source-map) useful for debug in production
-* lets overview serve each build (with [`http-server`](https://www.npmjs.com/package/http-server))
+* lets overview each build (with [`source-map-explorer`](https://www.npmjs.com/package/source-map-explorer), [`http-server`](https://www.npmjs.com/package/http-server))
 
 ---
 ## ng build explained
