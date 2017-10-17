@@ -91,11 +91,9 @@ when a string is sent - it cannot use the optimized code.
 
 ---
 
-# Exercises 2 and 3
+# Exercises 2
 * ex02.js
 * comment/un-comment and see when v8 de-optimize code
-
-* ex03.html
 
 ---
 ## Tips:
