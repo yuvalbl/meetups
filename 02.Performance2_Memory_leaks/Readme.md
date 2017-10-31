@@ -1,4 +1,5 @@
-# Title
+
+# Memory leaks
 
 (This document is optimized for presentation using [reveal-md](https://github.com/webpro/reveal-md))
 
@@ -9,9 +10,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit
 [reveal-md](https://github.com/webpro/reveal-md)
 ## Goals
 <!-- .element: class="fragment" -->
-* Lorem ipsum dolor
+* Understand/Define what is a memory leak
 <!-- .element: class="fragment" -->
-* Lorem ipsum dolor
+* Go trough optional causes
+<!-- .element: class="fragment" -->
+* Practice - seek and destroy
 <!-- .element: class="fragment" -->
 
 ---
@@ -36,7 +39,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 ---
 
-## Exercise
+## Exercise 01: seek and destroy
 Lorem ipsum.
 
 ---
