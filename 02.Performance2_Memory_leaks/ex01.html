@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Devtools - exercise 01</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Click and see console logs</h1>
+<p>
+    <button onclick="addCat()">Add Cat</button>
+</p>
+<p>
+    <button onclick="addCatListener()">Add Cat listener</button>
+</p>
+<p>
+    <button onclick="addCatToBag()">Throw Cat to Bag (Add to Array...)</button>
+    <button onclick="addCatToBag2()">Throw Cat to Bag V2 (Add to Array...)</button>
+</p>
+<p>
+    <button onclick="nextCat()">Replace cat</button>
+        Next cat: <span id="catNum">0</span>
+</p>
+<p>NOTE: no cats where harmed by this code</p>
+<div>
+    <div id="catHolder"></div>
+</div>
+<script>
+    "use strict";
+    // http://www.findcatnames.com/wp-content/uploads/2017/01/tabby-cat-names.jpg
+    //
+    let activeCatIndex =0;
+    const catsSrc = [
+        'https://static.pexels.com/photos/70844/cat-relax-chill-out-camacho-70844.jpeg',
+        'http://www.findcatnames.com/wp-content/uploads/2017/01/tabby-cat-names.jpg'
+    ];
+    const bag = [];
+    const moreCats = [];
+    function addCat() {
+        let catImg = document.createElement('img');
+        createMoreCats();
+        catImg.src = catsSrc[activeCatIndex];
+        catImg.style.width = '100px';
+        let catHolder = document.getElementById('catHolder');
+        catHolder.appendChild(catImg)
+    }
+
+    function createMoreCats() {
+        for(let i=0; i<100; i++) {
+            moreCats.push(document.createElement('img'))
+        }
+    }
+    function addCatListener() {
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('click', () => console.log('Miahoo'));
+        });
+    }
+
+    function addCatToBag() {
+        for(let i=0; i<1000; i++) {
+            // push a cloned array
+            bag.push(JSON.parse(JSON.stringify(catsSrc)));
+        }
+        console.log(bag);
+    }
+
+    function addCatToBag2() {
+        for(let i=0; i<1000; i++) {
+            // push a cloned array
+            bag.push(catsSrc);
+        }
+        console.log(bag);
+    }
+    function nextCat() {
+        activeCatIndex++;
+        if(activeCatIndex >= catsSrc.length) {
+            activeCatIndex = 0;
+        }
+        document.getElementById('catNum').innerText = activeCatIndex.toString();
+    }
+</script>
+</body>
+</html>

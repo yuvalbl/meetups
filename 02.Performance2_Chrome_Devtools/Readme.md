@@ -32,19 +32,26 @@ Chrome dev-tools has a great set of tools, which cen help us analyse and fix per
 ---
 
 ## Get familiar with all of Dev tools main tabs
-let's do a quick overview
+let's do a quick overview. for the demo we'll use:
+* https://angular.io/
+* ex01.html
 
 ---
 
 ## Learn what you can get from the Network Tab
-* Demos: [html5 rocks](https://www.html5rocks.com/en/tutorials/workers/basics/); [Havoda](http://www.havoda.org.il/)
+* Demos: [html5 rocks](https://www.html5rocks.com/en/tutorials/workers/basics/); [Havoda](http://www.havoda.org.il/);  [Bootstrap](https://getbootstrap.com/)
+* Filtering
+* Per-request analysis
+* [Timing explanation](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference#timing-explanation)
 * HAR export
-* Timing explanation
-* Exercises 1: analyse both sites with the Network Tab and look for performance issues
+* Exercises 1:
+<!-- .element: class="fragment"--> 
+analyse both sites with the Network Tab and look for performance issues.
+look for SSL, queue time, large no.of requests, download/waiting etc.
 
 ---
 
-## Learn to use recording tool and memory profiling
+## Learn to use [recording tool and memory profiling](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference)
 
 ---
 
