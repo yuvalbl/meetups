@@ -36,31 +36,74 @@ Lets catch them all!
 <!-- .element: class="fragment" -->
 * Why does it happen?
 Code is holding object references which are not required anymore.
-Like: Unnecessary data, detached DOM nodes or - "leftovers" from past components (Like observables)
-* Another issue may be a memory "bloat":
+Like: Unnecessary data/objects, detached DOM nodes or - "leftovers" from past components (Like observables)
+* Note: avoid using _delete_. setting to _null_ is enough
+* Note 2: Another issue may be a memory "bloat":
   Memory bloat is when a page uses more memory than is necessary for optimal page speed
   (which is per-device...)
 ---
 
-## Block 2
-<!-- .element: class="fragment" -->
-* Item 1
-<!-- .element: class="fragment" -->
-* Item 2
-<!-- .element: class="fragment" -->
-* Item 3
+## Demo 1: Cats (ex01.html)
+* code overview
+* load and use profiling tool
+* click around
 
 ---
 
+## Example 1
+```
+    // some bad ideas
+    Window['largeObject'] = new largeObject();
+    Window['largeLibrary'] = require(./someVanillaJSLibrary);
+```
+
+---
+
+## Example 2
+```
+    function work() {
+        const worker = new worker();
+        worker.doSomeWork();
+        return worker; //do we really need this?
+    };
+
+    const dumbWorker = work();
+```
+
+---
+
+## Example 3
+```
+    // Closures
+    function someObject() {
+        const extraLarge = new largeObject();
+        return function() {
+            console.log('I can use extraLarge object')
+        };
+    };
+```
+---
+## Example 4
+```
+    // Observables
+
+```
+---
+
 ## Exercise 01: seek and destroy
-Lorem ipsum.
+<!-- .element: class="fragment" -->
+* go to pokermon directory
+* `npm i`
+* `ng serve`
+* navigate between pages and see console + profiling tool
+* solve it somehow
 
 ---
 
 # Conclusion and Tips
 <!-- .element: class="fragment" -->
-* Item 1
+* Avoid global scope, _delete_
 <!-- .element: class="fragment" -->
-* Item 2
+* Release object reference when done
 <!-- .element: class="fragment" -->
-* Item 3
+* Observables: unsubscribe safely when done (for angular OnDestroy hook should be useful)
