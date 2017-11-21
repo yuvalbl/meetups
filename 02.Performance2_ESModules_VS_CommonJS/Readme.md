@@ -1,9 +1,11 @@
 ## ES Modules VS CommonJS
 <br/>
-<img src="vs.jpg" height=300px>
+<img src="vs.jpg" height=200px>
 <br/>
-### Inspired by a talk given by [Gil Tayar](https://docs.google.com/presentation/d/1pC4nfuJ7Z90YKb_rsMeCsFH6XuYdEJK8ovlwoZZmWh8/edit#slide=id.g2928e71216_0_25)
+Inspired by a talk given by [Gil Tayar](https://docs.google.com/presentation/d/1pC4nfuJ7Z90YKb_rsMeCsFH6XuYdEJK8ovlwoZZmWh8/edit#slide=id.g2928e71216_0_25)
+<br/>
 (This document is optimized for presentation using [reveal-md](https://github.com/webpro/reveal-md))
+
 
 ---
 
@@ -46,7 +48,6 @@ ESM:
 
 ---
 
----
 
 ## CJS vs ESM, round 1 (importing)
 CJS: (_main.js_):
@@ -81,13 +82,18 @@ ESM (_TMNT.mjs_):
 
 ---
 ## Recap:
-<!-- .element: class="fragment" -->
+
 * ESM extension is “.mjs” and (only!) use export/import
+<!-- .element: class="fragment" -->
+
 * CJS extension is “.js” and (only!) use require
+<!-- .element: class="fragment" -->
+
 * ESM  is async, while CJS  is sync
+<!-- .element: class="fragment" -->
 
 ---
-## CJS vs ESM, round 3 (Binding)
+### round 3 (Binding)
 CJS:
 ```
     // TMNT.js
@@ -111,19 +117,15 @@ ESM:
 ```
 
 ---
-## CJS vs ESM, round 4 (default and named imports)
+### round 4 (Default and named imports)
 
 CJS:
 ```
     // TMNT_2.js
     module.exports = () => {
-        return {
-            name: 'Splinter',
-            level: 'master'
-        };
+        return { name: 'Splinter', level: 'master' };
     };
     module.exports.mutatedBy = 'Rat'
-    
     // main.js
     const Splinter = require('./TMNT_2');
     const {mutatedBy} = Splinter;
@@ -133,18 +135,14 @@ ESM:
 ```
     // TMNT_2.mjs
     export default () => {
-       return {
-           name: 'Splinter',
-           level: 'master'
-       };
+        return { name: 'Splinter', level: 'master' };
     };
-    
     // main.mjs
     import {Splinter, {mutatedBy}} from './TMNT_2'
 ```
 ---
-## CJS vs ESM, round 5 (dynamic imports)
-<b>Note the file extensions</b>
+### round 5 (dynamic imports)
+<b>Note the file extensions</b><br/>
 CJS:
 ```
     // main.js
@@ -175,7 +173,6 @@ This will fail with error:
 ```
     // TMNT.js
     module.exports.Leo = 'Leonardo'
-
     // main.mjs
     import {Leo} = from './TMNT'
     console.log(Leo)
@@ -185,24 +182,27 @@ But his will work:
 ```
     // TMNT.js
     module.exports.Leo = 'Leonardo'
-
     // main.mjs
     import TMNT = from './TMNT'
     console.log(TMNT.Leo)
 ```
 
+---
 
 # Exercises 1
 * clone dir myTMNT
 * convert main.js to main.mjs (no need to convert other files)
-* run with node --experimental-modules
+* run with 
+```
+node --experimental-modules
+```
 
 ---
 
 # Conclusion and Tips
-<!-- .element: class="fragment" -->
 * ESM and CMJ, so much alike But - 
 <!-- .element: class="fragment" -->
 * ESM have a great advantage when it comes to async requests
 <!-- .element: class="fragment" -->
 * Get ready for the (near) future by writing ES modules (mjs extensions...)
+<!-- .element: class="fragment" -->

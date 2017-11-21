@@ -12,7 +12,7 @@ Chrome dev-tools provides great set of tools, which cen help us analyse and fix 
 <!-- .element: class="fragment" -->
 * Learn what you can get from the Network Tab
 <!-- .element: class="fragment" -->
-* Learn to use recording tool and memory profiling
+* Learn to use performance tab
 <!-- .element: class="fragment" -->
 
 ---

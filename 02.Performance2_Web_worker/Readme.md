@@ -36,9 +36,28 @@ Can improve UX greatly, by removing heavy calculations form the main thread.
 <!-- .element: class="fragment" -->
 
 
+
 ---
 
-# A simple worker (worker.js):
+### A simple worker (main.js):
+```
+    // main.js
+    if (window.Worker) {
+        const myWorker = new Worker('worker.js');
+    
+        // define response
+        myWorker.onmessage = function(msg) {
+            const result = msg.data;
+            console.log('result from worker: ' + result)
+        };
+    
+        myWorker.postMessage([1948, 2000]);
+    }
+```
+
+---
+
+### A simple worker (worker.js):
 ```
     // worker.js
     
@@ -55,22 +74,6 @@ Can improve UX greatly, by removing heavy calculations form the main thread.
 
 ---
 
-# A simple worker (main.js):
-```
-    // main.js
-    if (window.Worker) {
-        const myWorker = new Worker('worker.js');
-    
-        // define response
-        myWorker.onmessage = function(msg) {
-            const result = msg.data;
-        };
-    
-        myWorker.postMessage([1948, 2000]);
-    }
-```
----
-
 # Exercises 1
 * open ex01_fibo.html
 * identify the UX problem
@@ -78,9 +81,8 @@ Can improve UX greatly, by removing heavy calculations form the main thread.
 
 ---
 
-# Conclusion and Tips
-<!-- .element: class="fragment" -->
+## Conclusion and Tips
 * Web workers are good, specially for heavy calculations.
 <!-- .element: class="fragment" -->
-* Everything should be string - stringifying / parsing have it's tool as well
+* Everything should be string - stringifying / parsing have it's toll as well
 <!-- .element: class="fragment" -->
