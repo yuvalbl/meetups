@@ -84,7 +84,16 @@ Lets catch them all!
 
 ## Example 4
 ```
-    // Observables
+        // Observables
+        const subscribers = {};
+        this.subscribers.drops = someService$.subscribe(() => {
+            // do stuff
+        });
+        
+    	ngOnDestroy(): void {
+    		// Object.keys(this.subscribers).forEach((s) => 
+    		this.subscribers[s].unsubscribe());
+    	}
 
 ```
 
