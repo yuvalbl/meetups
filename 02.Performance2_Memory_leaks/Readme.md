@@ -23,7 +23,7 @@ Lets catch them all!
 <!-- .element: class="fragment" -->
 * Go trough optional causes
 <!-- .element: class="fragment" -->
-* Practice - seek and destroy
+* Analyse with dev-tools
 <!-- .element: class="fragment" -->
 
 ---
@@ -95,20 +95,9 @@ Lets catch them all!
 * Use memory tab and profiling tool
 * Click around
 
----
-
-## Exercise 01: seek and destroy
-<!-- .element: class="fragment" -->
-* go to pokermon directory
-<!-- .element: class="fragment" -->
-* npm i
-<!-- .element: class="fragment" -->
-* ng serve
-<!-- .element: class="fragment" -->
-* navigate between pages and see console + profiling tool
-<!-- .element: class="fragment" -->
-* solve it somehow
-<!-- .element: class="fragment" -->
+<div>
+    <img src="leak.jpg">
+</div>
 
 ---
 
@@ -118,5 +107,5 @@ Lets catch them all!
 
 * Release object reference when done
 <!-- .element: class="fragment" -->
-* Observables: unsubscribe safely when done (for angular OnDestroy hook should be useful)
+* Unsubscribe from Observables safely when done using them (for angular OnDestroy hook should be useful)
 <!-- .element: class="fragment" -->
