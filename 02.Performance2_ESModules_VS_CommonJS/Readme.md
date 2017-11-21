@@ -1,4 +1,7 @@
-# ES Modules VS CommonJS
+## ES Modules VS CommonJS
+<br/>
+<img src="vs.jpg" height=300px>
+<br/>
 ### Inspired by a talk given by [Gil Tayar](https://docs.google.com/presentation/d/1pC4nfuJ7Z90YKb_rsMeCsFH6XuYdEJK8ovlwoZZmWh8/edit#slide=id.g2928e71216_0_25)
 (This document is optimized for presentation using [reveal-md](https://github.com/webpro/reveal-md))
 
@@ -15,6 +18,7 @@ Which let us enjoy async loading and use same code for both sides.
 * Understand CJS/ESM different syntax
 <!-- .element: class="fragment" -->
 * Practice converting CJS to ESM
+<!-- .element: class="fragment" -->
 
 ---
 
@@ -22,10 +26,10 @@ Which let us enjoy async loading and use same code for both sides.
 <!-- .element: class="fragment" -->
 * Allow Async loading
 <!-- .element: class="fragment" -->
-* Native support and better compatibility: same code can be used for both client
-and server, no extra libraries [required](http://requirejs.org/)
+* Native support and better compatibility: same code can be used for both client and server.
 <!-- .element: class="fragment" -->
 * It seems like it is going to be the next standard
+<!-- .element: class="fragment" -->
 
 ---
 
