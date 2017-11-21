@@ -117,7 +117,7 @@ ESM:
 ```
 
 ---
-### round 4 (Default and named imports)
+### round 4 (imports)
 
 CJS:
 ```
@@ -189,12 +189,25 @@ But his will work:
 
 ---
 
-# Exercises 1
+## Exercises 1
 * clone dir myTMNT
 * convert main.js to main.mjs (no need to convert other files)
 * run with 
 ```
 node --experimental-modules
+```
+
+---
+## Exercises 1 - Solution
+```
+    // main.mjs
+    import TMNT from  './TMNT';
+    import Splinter from './TMNT_2';
+    const sensei = Splinter();
+    
+    console.log(TMNT.Leo);
+    console.log(sensei);
+    console.log(Splinter.mutatedBy);
 ```
 
 ---
