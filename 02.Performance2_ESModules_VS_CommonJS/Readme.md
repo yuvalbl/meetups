@@ -75,9 +75,9 @@ CJS (_TMNT.js_):
 ESM (_TMNT.mjs_):
 ```
     export const Leo = 'Leonardo';
-    export const Leo = 'Michelangelo';
-    export const Leo = 'Donatello';
-    export const Leo = 'Raphael';
+    export const Mikey = 'Michelangelo';
+    export const Don = 'Donatello';
+    export const Raph = 'Raphael';
 ```
 
 ---
@@ -137,8 +137,10 @@ ESM:
     export default () => {
         return { name: 'Splinter', level: 'master' };
     };
+    export const mutatedBy = 'Rat'
+
     // main.mjs
-    import {Splinter, {mutatedBy}} from './TMNT_2'
+    import Splinter, {mutatedBy} from './TMNT_2'
 ```
 ---
 ### round 5 (dynamic imports)

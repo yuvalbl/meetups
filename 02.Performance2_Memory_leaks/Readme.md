@@ -40,7 +40,7 @@ Lets catch them all!
 <!-- .element: class="fragment" -->
 * Note 1: avoid using delete. setting to null is enough.
 <!-- .element: class="fragment" -->
-* Note 2: Another issue may be a memory "bloat": Memory bloat is when a page uses more memory than is necessary for optimal page speed (which is per-device...)
+* Note 2: Another issue may be a memory "bloat": Memory bloat is when a page uses more memory than is necessary for optimal page speed
 <!-- .element: class="fragment" -->
 
 

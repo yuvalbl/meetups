@@ -32,28 +32,21 @@
 </p>
 <script>
     "use strict";
+    const myWorker = new Worker('myFiboWorker.js');
 
     function doWork() {
         const input = parseInt( document.getElementById('fiboInput').value, 10);
-        const output = fibonacci(input);
-        console.log('output is ' + output);
-        document.getElementById('fiboOutput').innerText = output;
+
+        // define response
+        myWorker.onmessage = function(msg) {
+            const result = msg.data;
+            document.getElementById('fiboOutput').innerText = result;
+        };
+
+        myWorker.postMessage(input);
     }
 
-    // get the N number in fibonacci series
-    function fibonacci(num) {
-        let a = 1;
-        let b = 0;
-        let temp;
 
-        while (num >= 0){
-            temp = a;
-            a = a + b;
-            b = temp;
-            num--;
-        }
-        return b;
-    }
 </script>
 </body>
 </html>
