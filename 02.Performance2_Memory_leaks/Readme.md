@@ -23,7 +23,7 @@ Lets catch them all!
 <!-- .element: class="fragment" -->
 * Go trough optional causes
 <!-- .element: class="fragment" -->
-* Practice - seek and destroy
+* Analyse with dev-tools
 <!-- .element: class="fragment" -->
 
 ---
@@ -34,33 +34,87 @@ Lets catch them all!
  memory leak occurs when a memory which is no longer needed is not released.
 
 <!-- .element: class="fragment" -->
-* Why does it happen?
-Code is holding object references which are not required anymore.
-Like: Unnecessary data, detached DOM nodes or - "leftovers" from past components (Like observables)
-* Another issue may be a memory "bloat":
-  Memory bloat is when a page uses more memory than is necessary for optimal page speed
-  (which is per-device...)
----
+* Why does it happen? Code is holding object references which are not required anymore.
+<!-- .element: class="fragment" -->
+* Like What? Unnecessary objects, detached DOM nodes or - leftovers from past components (Like observables)
+<!-- .element: class="fragment" -->
+* Note 1: avoid using delete. setting to null is enough.
+<!-- .element: class="fragment" -->
+* Note 2: Another issue may be a memory "bloat": Memory bloat is when a page uses more memory than is necessary for optimal page speed
+<!-- .element: class="fragment" -->
 
-## Block 2
-<!-- .element: class="fragment" -->
-* Item 1
-<!-- .element: class="fragment" -->
-* Item 2
-<!-- .element: class="fragment" -->
-* Item 3
+
 
 ---
 
-## Exercise 01: seek and destroy
-Lorem ipsum.
+## Example 1
+```
+    // some bad ideas
+    Window['largeObject'] = new largeObject();
+    Window['largeLibrary'] = require(./someVanillaJSLibrary);
+```
+
+---
+
+## Example 2
+```
+    function work() {
+        const worker = new worker();
+        worker.doSomeWork();
+        return worker; //do we really need this?
+    };
+
+    const dumbWorker = work();
+```
+
+---
+
+## Example 3
+```
+    // Closures
+    function someObject() {
+        const extraLarge = new largeObject();
+        return function() {
+            console.log('I can use extraLarge object')
+        };
+    };
+```
+
+---
+
+## Example 4
+```
+        // Observables
+        const subscribers = {};
+        this.subscribers.drops = someService$.subscribe(() => {
+            // do stuff
+        });
+        
+    	ngOnDestroy(): void {
+    		// Object.keys(this.subscribers).forEach((s) => 
+    		this.subscribers[s].unsubscribe());
+    	}
+
+```
+
+---
+
+## Demo 1: Cats (ex01.html)
+* Code overview
+* Use memory tab and profiling tool
+* Click around
+
+<div>
+    <img src="leak.jpg">
+</div>
 
 ---
 
 # Conclusion and Tips
 <!-- .element: class="fragment" -->
-* Item 1
+* Avoid global scope and the <!-- .element: class="fragment" --> _delete_ keyword
+
+* Release object reference when done
 <!-- .element: class="fragment" -->
-* Item 2
+* Unsubscribe from Observables safely when done using them (for angular OnDestroy hook should be useful)
 <!-- .element: class="fragment" -->
-* Item 3

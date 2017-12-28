@@ -1,8 +1,9 @@
-import TMNT from  './TMNT';
+import TMNT from './TMNT';
 import Splinter from './TMNT_2';
+const mutatedBy = Splinter();
+TMNT.LeoUseKatanas();
 
 
-const sensei = Splinter();
-console.log(TMNT.Leo);
-console.log(sensei);
-console.log(Splinter.mutatedBy);
+console.log('My Favorite Turtle: ' +TMNT.Leo);
+console.log(Splinter);
+console.log(mutatedBy);
