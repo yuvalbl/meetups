@@ -11,7 +11,7 @@ Based on [You will learn RxJS]( https://www.youtube.com/watch?v=uQ1zhJHclvs)
 <!-- .element: class="fragment" -->
 * Build basic version of RXjs
 <!-- .element: class="fragment" -->
-* Understand the concept of observables and subscribe
+* Understand the concept of observables and subscribe (They are just functions! :)
 <!-- .element: class="fragment" -->
 
 ---

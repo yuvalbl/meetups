@@ -1,11 +1,12 @@
-# Reactive Programming - what & why?
+# Reactive Programming
+## what & why?
 
 (This document is optimized for presentation using [reveal-md](https://github.com/webpro/reveal-md))
 
 ---
 
 # Overview
-Reactive Programming:  what is it, and why it is a big deal?
+Reactive Programming - what is it, and why it is a big deal?
 
 ## Goals
 <!-- .element: class="fragment" -->
@@ -61,18 +62,18 @@ data / events stream usually explained by __marbles__:
 ## Anything can be a stream! 
 
 ### take 2 - click events (invoke ONLY on double clicks)
-### live demo [jsbin](https://jsbin.com/fudatiz/7/edit?js,console)
+### live demo [jsbin](https://plnkr.co/edit/?p=preview)
 [egghead tutorial](https://egghead.io/lessons/rxjs-use-an-event-stream-of-double-clicks-in-rxjs)
 
 
 ---
 
-## Rules
+## Things to remember...
 * Anything can be a stream
 <!-- .element: class="fragment" -->
 * Learn the principles, not the operators
 <!-- .element: class="fragment" -->
-* Operators - many are similar to what you know, just return observables
+* Operators - many are similar to what you know, only now they return observables
 <!-- .element: class="fragment" -->
 * Declare behavior completely at declare time
 <!-- .element: class="fragment" -->

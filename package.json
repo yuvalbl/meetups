@@ -7,8 +7,7 @@
     "m2.4": "reveal-md ./02.Performance2_Web_worker/Readme.md  --theme sky",
     "m3.1": "reveal-md ./03.Reactive_Programming_intro/Readme.md  --theme league",
     "m3.2": "reveal-md ./03.Reactive_Programming_lets_build_rxjs/Readme.md --theme serif",
-    "m3.3": "reveal-md ./03.Reactive_Programming_rxjs_operators/Readme.md --theme moon",
-    "m3.4": "reveal-md ./03.Reactive_Programming_in_real_life/Readme.md"
+    "m3.3": "reveal-md ./03.Reactive_Programming_rxjs_operators/Readme.md --theme moon"
   },
   "dependencies": {}
 }
