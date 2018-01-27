@@ -14,7 +14,7 @@ RXjs Operators may be confusing. let's review some of them to understand the log
 <!-- .element: class="fragment" -->
 * flatMap
 <!-- .element: class="fragment" -->
-* Cold to Hot operators
+* Cold to Hot Observable operators
 <!-- .element: class="fragment" -->
 
 ---
@@ -195,7 +195,7 @@ Note: Subjects cannot be reused
 
 Share
 ```
-    const source = Rx.Observable.range(0, 5).publish();
+    const source = Rx.Observable.range(0, 5).Share();
     const sub1 = source.subscribe(x => console.log("Observer 1: " + x));
     const sub2 = source.subscribe(x => console.log("Observer 2: " + x));
     // Output: 0, 1, 2, 3, 4, 0, 1, 2, 3, 4

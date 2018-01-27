@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <style>
+        h1 {
+            font-family: sans-serif;
+            color:rgb(97, 59, 133);
+        }
+        h1 span {
+            color:rgba(224, 224, 0, 0.829)
+        }
+        .blue {
+            background-color: rgb(63, 63, 182);
+        }
+        .green {
+            background-color: rgb(15, 150, 71);
+        }
+        .pink {
+            color:rgb(189, 44, 157);
+            font-family:Verdana, Geneva, Tahoma, sans-serif               
+         }
+        .orange {
+            color:orange
+        }
+        button {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            background-color: rgb(66, 184, 221);
+            padding: .5em 1em;
+            text-decoration: none;
+            border: transparent;
+            cursor: pointer;
+            outline: none;
+        }
+        button:hover {
+            background-color: rgb(92, 217, 255);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> I Hate <span>Banana</span> Calculator </h1>
+    <input id="number1" type="text">
+    
+    
+    <button class="" onclick="addClicked()">+</button>
+    <button class="blue" onclick="subtractClicked()">-</button>
+    <button class="green" onclick="multiplicationClicked()">*</button>
+    <button class="green" onclick="divisionClicked()">/</button>
+
+    <input id="number2" type="number">
+    
+    <div class="pink">
+        result:
+        <p class="orange" id="result"></p>    
+    </div>
+
+    <script>
+
+        function getNumber(id) {
+            return parseInt(document.getElementById(id).value);
+        }
+        
+        function displayResult(value) {
+            document.getElementById('result').innerHTML = value;
+        }
+
+        function addClicked() {
+            var number1 = getNumber('number1');
+            var number2 = getNumber('number2');
+
+            displayResult(number1 + number2);
+        }
+
+        function subtractClicked() {
+            var number1 = getNumber('number1');
+            var number2 = getNumber('number2');
+   
+            displayResult(number1 - number2);
+        }
+
+        function multiplicationClicked() {
+            var number1 = getNumber('number1');
+            var number2 = getNumber('number2');
+
+            displayResult(number1 * number2);
+        }
+
+        function divisionClicked() {
+            var number1 = getNumber('number1');
+            var number2 = getNumber('number2');
+
+            displayResult(number1 / number2);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 {
   "name": "Meetups",
   "scripts": {
+    "m0": "reveal-md ./0.Web_And_Angular_intro_JAN_2018/Readme.md",
     "m2.1": "reveal-md ./02.Performance2_Chrome_Devtools/Readme.md",
     "m2.2": "reveal-md ./02.Performance2_Memory_leaks/Readme.md  --theme league",
     "m2.3": "reveal-md ./02.Performance2_ESModules_VS_CommonJS/Readme.md  --theme serif",
@@ -9,5 +10,7 @@
     "m3.2": "reveal-md ./03.Reactive_Programming_lets_build_rxjs/Readme.md --theme serif",
     "m3.3": "reveal-md ./03.Reactive_Programming_rxjs_operators/Readme.md --theme moon"
   },
-  "dependencies": {}
+  "dependencies": {
+    "reveal": "0.0.4"
+  }
 }
