@@ -22,11 +22,11 @@
 Yuval Bar Levi (33) <br> 7 Years of Web Development <br>
 Play with open source (Webiks, Midburn etc.) and Teaching (Web, Python) <br>
 </p>
-<div style="float:right">
+<div style="float:right;width: 35%;">
     <img src="./my_profile.jpg" style="max-height:30vh">
 </div>
-
-<div style="float:left">
+<div style="clear: both;"></div>
+<div style="float:left;width:35%;">
     <a href="http://webiks.com/" target="_blank">
         <img src="./webiks.png" style="max-height:30vh">
     </a>
