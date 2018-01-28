@@ -131,12 +131,12 @@ __Angular 5 Robot Factory Demo__
 ---
 
 ### Testing 
-* Karma and [Jasmine](https://jasmine.github.io/pages/docs_home.html) - Angular built-in testing tools
-<!-- .element: class="fragment" -->
+* Karma <!-- .element: class="fragment" -->and [Jasmine](https://jasmine.github.io/pages/docs_home.html) - Angular built-in testing tools
+
 * TDD
 <!-- .element: class="fragment" -->
-* advanced scenarios (DOM, HTTP mock & RX) and E2E
-
+* Advanced scenarios (DOM, HTTP mock & RX) and E2E
+<!-- .element: class="fragment" -->
 
 
 ---
