@@ -126,7 +126,7 @@ __Angular 5 Robot Factory Demo__
 * Production debugging
 <!-- .element: class="fragment" -->
 * Logging
-
+<!-- .element: class="fragment" -->
 
 ---
 
