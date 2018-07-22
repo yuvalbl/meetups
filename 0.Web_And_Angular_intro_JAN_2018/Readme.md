@@ -20,7 +20,7 @@
 ### Who am I?
 <p style="float:left; width: 60%; text-align:left; padding: 0 20px">
 Yuval Bar Levi (33) <br> 7 Years of Web Development <br>
-Play with open source (Webiks, Midburn etc.) and Teaching (Web, Python) <br>
+Play with open source and teaching <br>
 </p>
 <div style="float:right;width: 35%;">
     <img src="./my_profile.jpg" style="max-height:30vh">
@@ -70,7 +70,11 @@ Play with open source (Webiks, Midburn etc.) and Teaching (Web, Python) <br>
 <!-- .element: class="fragment" -->
 <a href="Calculator.html" target="_blank">Basic HTML</a>
 <!-- .element: class="fragment" -->
-* <div>The Power of CSS [-1-](https://a.singlediv.com) [-2-](https://cssanimation.rocks/space-transitions/)</div>
+* <div>The Power of CSS 
+[-1-](https://a.singlediv.com) 
+[-2-](https://cssanimation.rocks/space-transitions/)
+[-3-](http://scottcheng.github.io/revolutionary-css3/)
+</div>
 <!-- .element: class="fragment" -->
 
 ---

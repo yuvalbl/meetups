@@ -10,12 +10,12 @@ const requestOnRefreshStream = refreshClickStream
         return 'https://api.github.com/users?since=' + randomOffset;
     });
 
-//
+// s-------r----r----->
 // https://blog.angularindepth.com/rxjs-understanding-the-publish-and-share-operators-16ea2f446635
 const responseStream = startupRequestStream.merge(requestOnRefreshStream)
     .flatMap(requestUrl =>
         Rx.Observable.fromPromise(jQuery.getJSON(requestUrl))
-    );
+    ).share();
 
 
 function createSuggestionStream(responseStream) {
